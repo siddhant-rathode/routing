@@ -1,12 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const Nav = () => {
   return (
     <div className='flex gap-x-10 mb-10'>
-        <Link to='/'>Home</Link>
-        <Link to='/about'>About</Link>
-        <Link to='/contact'>Contact</Link>
+        <NavLink style={(e) => e.isActive ? {textDecoration: "underline"} : {}} className={(e) => e.isActive ? "text-red-500" : ""} to='/'>Home</NavLink>
+        <NavLink style={(e) => e.isActive ? {textDecoration: "underline"} : {}} className={(e) => e.isActive ? "text-red-500" : ""} to='/about'>About</NavLink>
+        <NavLink style={(e) => e.isActive ? {textDecoration: "underline"} : {}} className={(e) => e.isActive ? "text-red-500" : ""} to='/contact'>Contact</NavLink>
     </div>
   )
 }
